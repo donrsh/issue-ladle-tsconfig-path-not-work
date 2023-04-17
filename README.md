@@ -7,6 +7,6 @@ This repo is a nx project, with 3 lib projects: `ladle`, `app-shared` and `utils
 
 To execute ladle, run `npx nx run ladle:ladle`
 
-The issue is: with `@ladle/react@2.4.5`, it works. However, with `@ladle/react@2.11.1`, `utils/src/add` cannot be found.
+The issue is: with `@ladle/react@2.4.5`, it works. However, with `@ladle/react@2.11.1`, an error occurred: `utils/src/add` cannot be found.
 
 To install different versions of `@ladle/react`, run `pnpm add -w @ladle/react@version` in the project root.
