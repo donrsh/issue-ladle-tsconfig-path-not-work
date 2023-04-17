@@ -1,0 +1,17 @@
+{
+  "extends": "../../shared.tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // align with apps tsconfig
+      "@/*": ["../app-shared/*"],
+      "@utils/*": ["../utils/src/*"]
+    }
+  },
+  "include": [
+    "**/*",
+    "./.ladle/**/*",
+    "../app-shared/**/*",
+    "../utils/src/**/*"
+  ]
+}

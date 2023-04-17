@@ -1,0 +1,46 @@
+{
+  "npmScope": "my-project",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "nx.json": "*"
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "prod": ["!{projectRoot}/**/*.spec.tsx"]
+  },
+  "targetDefaults": {
+    "build": {
+      "inputs": ["prod", "^prod"],
+      "dependsOn": ["^build"]
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/js"
+  },
+  "generators": {
+    "@nrwl/js:library": {
+      "buildable": true
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "parallel": 6,
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  }
+}

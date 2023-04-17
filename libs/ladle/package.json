@@ -1,0 +1,14 @@
+{
+  "name": "ladle",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ladle": "ladle serve -p 3800",
+    "ladle-build": "ladle build",
+    "ladle-preview": "ladle preview -p 3801"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
